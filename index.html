@@ -2651,13 +2651,14 @@ function drawHUD() {
     ctx.font = 'bold 16px monospace';
     ctx.fillText(`★ ${Math.ceil(player.starTimer)}`, CW - 100, 45);
   }
-// Отладочный вывод размеров
+  // Отладочный вывод размеров + состояния
   ctx.fillStyle = 'rgba(255,255,255,0.9)';
   ctx.font = 'bold 14px monospace';
   ctx.textAlign = 'left';
-  ctx.fillText(`win: ${window.innerWidth}x${window.innerHeight}`, 12, CH - 10);
-  ctx.fillText(`cv: ${canvas.width}x${canvas.height}`, 12, CH - 30);
-  ctx.fillText(`CW/CH: ${CW}x${CH}`, 12, CH - 50);}
+  ctx.fillText(`state: ${game.state}`, 12, CH - 10);
+  ctx.fillText(`player: ${player.x.toFixed(1)},${player.y.toFixed(1)}`, 12, CH - 30);
+  ctx.fillText(`cam: ${game.cameraX.toFixed(1)}`, 12, CH - 50);
+  ctx.fillText(`grid: ${game.level ? game.level.W + 'x' + game.level.H : 'null'}`, 12, CH - 70);
 
 function drawButtons() {
   ctx.save();
