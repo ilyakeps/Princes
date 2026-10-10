@@ -1388,7 +1388,7 @@ function resize() {
   // ★ ЕДИНСТВЕННАЯ НОВАЯ СТРОКА: адаптивный размер тайла
   // Уровень = 16 тайлов по высоте. Считаем, сколько пикселей на тайл,
   // чтобы всё влезло в экран. Ограничиваем: минимум 16, максимум 32.
-  CONFIG.tileSize = Math.max(24, Math.min(32, Math.floor(CH / 13)));
+  CONFIG.tileSize = Math.max(24, Math.min(32, Math.floor(CH / 15)));
 
   setupButtons();
 }
