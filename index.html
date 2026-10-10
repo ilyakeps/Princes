@@ -2657,6 +2657,10 @@ function drawHUD() {
     ctx.font = 'bold 16px monospace';
     ctx.fillText(`★ ${Math.ceil(player.starTimer)}`, CW - 100, 45);
   }
+  ctx.fillStyle = 'rgba(255,0,0,0.9)';
+  ctx.font = 'bold 14px monospace';
+  ctx.textAlign = 'left';
+  ctx.fillText(`CH=${CH} ts=${CONFIG.tileSize} py=${player.y.toFixed(1)}`, 12, CH - 5);
 }
 
 function drawButtons() {
