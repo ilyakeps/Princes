@@ -1384,6 +1384,12 @@ function resize() {
 
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.imageSmoothingEnabled = false;
+
+  // ★ ЕДИНСТВЕННАЯ НОВАЯ СТРОКА: адаптивный размер тайла
+  // Уровень = 16 тайлов по высоте. Считаем, сколько пикселей на тайл,
+  // чтобы всё влезло в экран. Ограничиваем: минимум 16, максимум 32.
+  CONFIG.tileSize = Math.max(16, Math.min(32, Math.floor(CH / 16)));
+
   setupButtons();
 }
 
