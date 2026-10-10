@@ -1480,13 +1480,13 @@ function updateKeys() {
 const buttons = [];
 function setupButtons() {
   buttons.length = 0;
-  const bw = Math.min(110, CW / 7);
+  const bw = Math.min(90, CW / 10);
   const pad = 12;
   const bottom = CH - bw - pad;
   buttons.push({ id: 'left',  x: pad,               y: bottom,          w: bw, h: bw });
   buttons.push({ id: 'right', x: pad + bw + 8,      y: bottom,          w: bw, h: bw });
   buttons.push({ id: 'down',  x: pad,               y: bottom - bw - 8, w: bw, h: bw });
-  buttons.push({ id: 'up',    x: pad + bw + 8,      y: bottom - bw - 8, w: bw, h: bw });
+  //buttons.push({ id: 'up',    x: pad + bw + 8,      y: bottom - bw - 8, w: bw, h: bw });
   buttons.push({ id: 'fire',  x: CW - pad - bw*1.5 - 8, y: bottom,       w: bw*1.5, h: bw });
   buttons.push({ id: 'jump',  x: CW - pad - bw*1.5,     y: bottom - bw - 8, w: bw*1.5, h: bw });
 }
